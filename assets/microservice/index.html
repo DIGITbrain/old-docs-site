@@ -637,8 +637,8 @@
 <td>description</td>
 <td></td>
 <td>String</td>
-<td>This microservices solves a certain problem using very specific methods. It supports some special input types, and allows results to be presented in chosen format.</td>
-<td>human readable short description of the Microservice's capabilities, e.g. which problems could be solved with it</td>
+<td>This microservices solves a certain problem using very specific methods...</td>
+<td>human readable short description of the Microservice's capabilities</td>
 <td>mandatory</td>
 </tr>
 <tr>
@@ -682,63 +682,18 @@
 <td>deploymentData</td>
 <td></td>
 <td>JSON</td>
-<td>"services": {</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>"db": {</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>"image": "nginx"</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>}</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>}</td>
+<td>See https://github.com/UoW-CPC/ADTGenerator/blob/main/examples/metadata_microservice.json#L30</td>
 <td>JSON of docker-compose or kubernetes manifest required to run the container</td>
 <td>mandatory</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr>
 <td></td>
 <td>configurationData</td>
 <td></td>
 <td>Map(Files)</td>
-<td>filename: <file.yml>,</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>other_filename: <other_file.cfg></td>
+<td>filename: <file.yml>, other_filename: <other_file.cfg></td>
 <td>configuration file(s) required by the service</td>
 <td>optional</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr>
 <td></td>
@@ -1052,17 +1007,8 @@
 <td>DATA_SCHEMA</td>
 <td>List( DATA_SCHEMA)</td>
 <td>{jpg}</td>
-<td>supported internal message structure, semantics, ontology.</td>
-<td></td>
-</tr>
-<tr>
-<td>It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, …</td>
+<td>supported internal message structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, …</td>
 <td>optional</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr>
 <td>Output Data (WP4)</td>
@@ -1187,17 +1133,8 @@
 <td>DATA_SCHEMA</td>
 <td>List( DATA_SCHEMA)</td>
 <td>{jpg}</td>
-<td>supported internal message structure, semantics, ontology.</td>
-<td></td>
-</tr>
-<tr>
-<td>It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, …</td>
+<td>supported internal message structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, …</td>
 <td>optional</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr>
 <td>Model(WP5)</td>
