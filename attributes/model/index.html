@@ -950,15 +950,15 @@ has these sections:</p>
 </dd>
 <dt><code>Name</code></dt>
 <dd>
-<p><strong>Optional</strong>-<em>string</em>- Name of the model</p>
+<p><strong>Optional</strong>-<em>string</em>- Human-readable name of the output</p>
 </dd>
 <dt><code>Version</code></dt>
 <dd>
-<p><strong>Optional</strong>-<em>semver (if model only has revisions, use semver prerelease 0.1, 0.2, etc.)</em>- Version of the model</p>
+<p><strong>Optional</strong>-<em>semver</em>- Version of the model. If model only has revisions, use semver prerelease 0.1, 0.2, etc.</p>
 </dd>
 <dt><code>License</code></dt>
 <dd>
-<p><strong>Optional</strong>-<em>enum tbd in SAD group</em>- License of the model</p>
+<p><strong>Optional</strong>-<em>enum</em>- License of the model.  Type tbd in SAD group</p>
 </dd>
 <dt><code>Provider</code></dt>
 <dd>
@@ -966,7 +966,7 @@ has these sections:</p>
 </dd>
 <dt><code>Provider_contacts</code></dt>
 <dd>
-<p><strong>Optional</strong>-<em>obj</em>- OPTIONAL: Dictionary with keys being phone, email, address - Type takes into account co-simulation models, for which solver info is mandatory (next slide)</p>
+<p><strong>Optional</strong>-<em>obj</em>- Dictionary with keys being phone, email, address - Type takes into account co-simulation models, for which solver info is mandatory (next slide)</p>
 </dd>
 <dt><code>AuthTool</code></dt>
 <dd>
@@ -978,7 +978,7 @@ has these sections:</p>
 </dd>
 <dt><code>Fidelity</code></dt>
 <dd>
-<p><strong>Optional</strong>-<em>number</em>- OPTIONAL: Error of the model’s prediction</p>
+<p><strong>Optional</strong>-<em>number</em>- Error of the model’s prediction</p>
 </dd>
 <dt><code>Model_URI</code></dt>
 <dd>
@@ -997,15 +997,55 @@ has these sections:</p>
 <dl>
 <dt><code>In-slots</code></dt>
 <dd>
-<p><strong>Optional</strong>-<em>array of obj  (key (group.key), name, dimensions (e.g. 2, 3, etc.), units (human-readable-name, exponents, offset, scale), default value, ranges, description)</em>- Values on which the model is evaluated (or parameters that might set before or during the evaluation) - Inputs and parameters together, although if needed we can still differentiate them internally in key field for each specific model.</p>
+<p><strong>Optional</strong>-<em>array of obj</em>- Values on which the model is evaluated (or parameters that might set before or during the evaluation) - Inputs and parameters together, although if needed we can still differentiate them internally in key field for each specific model.</p>
+</dd>
+<dt><code>Key</code></dt>
+<dd>
+<p><strong>Optional</strong>-<em>string</em>- Group key (eg. type and name) of the output</p>
+</dd>
+<dt><code>Dimensions</code></dt>
+<dd>
+<p><strong>Optional</strong>-<em>number</em>- Number of dimensions of the output (i.e. scalar, vector field)</p>
+</dd>
+<dt><code>Is-continuous</code></dt>
+<dd>
+<p><strong>Optional</strong>-<em>boolean</em>- Continuous or discreet output</p>
+</dd>
+<dt><code>Units</code></dt>
+<dd>
+<p><strong>Optional</strong>-<em>obj (see subkeys below)</em>- Values related to the output measurement units</p>
+</dd>
+<dt><code>Units.Unit</code></dt>
+<dd>
+<p><strong>Optional</strong>-<em>string</em>- Units of the output (e.g Pa, m/s, etc…)</p>
+</dd>
+<dt><code>Units.Exponent</code></dt>
+<dd>
+<p><strong>Optional</strong>-<em>array of number</em>- eg. exponents for kg (SI) {1, -2, 0, 0, 0, 0, 1}</p>
+</dd>
+<dt><code>Units.Offset</code></dt>
+<dd>
+<p><strong>Optional</strong>-<em>number</em>- scale offset if needed (e.g. K to C conversion)</p>
+</dd>
+<dt><code>Units.Scale</code></dt>
+<dd>
+<p><strong>Optional</strong>-<em>number</em>- Order of magnitude of the measurement unit scale e.g. Scale is equal to 10^-3 for values expressed in mm</p>
+</dd>
+<dt><code>Default-value</code></dt>
+<dd>
+<p><strong>Optional</strong>-<em>number</em>- Default value for the output</p>
+</dd>
+<dt><code>Ranges</code></dt>
+<dd>
+<p><strong>Optional</strong>-<em>array of number</em>- Max and min value of the output</p>
 </dd>
 <dt><code>Outputs</code></dt>
 <dd>
-<p><strong>Optional</strong>-<em>nan</em>- Values that the model approximates</p>
+<p><strong>Optional</strong>-<em>array of obj</em>- Values that the model approximates</p>
 </dd>
 <dt><code>CosimSolverInfo</code></dt>
 <dd>
-<p><strong>Optional</strong>-****- OPTIONAL (for co-simulation Type only)</p>
+<p><strong>Optional</strong>-<em>obj</em>- For co-simulation Type only</p>
 </dd>
 </dl>
 <h3 id="dependant-fmus">Dependant FMUs</h3>

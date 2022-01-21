@@ -1010,13 +1010,13 @@ has these sections:</p>
 </div>
 </div>
 </dd>
-<dt><code>DATA_PROVIDER</code></dt>
+<dt><code>PROVIDER</code></dt>
 <dd>
 <p><strong>Auto-generated</strong>-<em>id</em>- Legal entity who provides the data resource (owner). It is the affiliation of the author by default.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nt">DATA_PROVIDER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UUID</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">PROVIDER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UUID</span><span class="w"></span>
 </code></pre></div>
 </div>
 </div>
@@ -1034,25 +1034,13 @@ has these sections:</p>
 </div>
 </div>
 </dd>
-<dt><code>PARENT</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>id</em>- Refercing a parent record. All fields of parent are inherited by this record, fields filled here will override parent field values (?).</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Example</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nt">PARENT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">inherit legal entity, contact details from a parent record.</span><span class="w"></span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</dd>
 </dl>
 <h3 id="description">Description</h3>
 <dl>
 <dt><code>DATA_NAME</code></dt>
 <dd>
 <p><strong>Required</strong>-<em>string</em>- Name of the data resource. (The directory hierarchy in Nexus provides a fully qualified (FQ) name, which is unique.)</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nt">DATA_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CNSPiezoBolt#1 (in directory</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">factory 1 , machine1 , piezobolts)</span><span class="w"></span>
@@ -1061,37 +1049,13 @@ has these sections:</p>
 </div>
 </div>
 </dd>
-<dt><code>VERSION</code></dt>
+<dt><code>DATA_VERSION</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>string</em>- Version of this data resource entry (major.minor.patch). Defaults to 1.0.0</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nt">VERSION</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.3.4</span><span class="w"></span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</dd>
-<dt><code>DATA_SIZE</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>integer</em>- Estimated/exact size of data (e.g. file size, volume size, or message size); might be used to assess HW requirements (RAM, CPU) . In bytes (k - kilo, m - mega, t - tera, p - peta)</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Example</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nt">DATA_SIZE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">112m</span><span class="w"></span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</dd>
-<dt><code>DATA_CONTACT</code></dt>
-<dd>
-<p><strong>Required</strong>-<em>string</em>- Data provider contact point, e.g. email address, to get access to these data (ask permissions/credentials to use these data). Optional if it corresponds to DATA_PROVIDER (email) details.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Example</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nt">DATA_CONTACT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">info@company.com</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">DATA_VERSION</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.3.4</span><span class="w"></span>
 </code></pre></div>
 </div>
 </div>
@@ -1100,7 +1064,7 @@ has these sections:</p>
 <dt><code>DATA_DESC</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>string</em>- Human readable description of the data resource.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nt">DATA_DESC</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This sensor measures temperature in Celsius, sends data via ConSenses edge device via an MQTT broker</span><span class="w"></span>
@@ -1109,13 +1073,25 @@ has these sections:</p>
 </div>
 </div>
 </dd>
-<dt><code>DATA_SPECS_DOC</code></dt>
+<dt><code>DATA_DESC_URL</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>URL</em>- More detailed specification of data source characteristics (doc, pdf, …)</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nt">DATA_SPECS_DOC</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data-source-specification-sheet.pdf</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">DATA_DESC_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data-source-specification-sheet.pdf</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</dd>
+<dt><code>DATA_SIZE</code></dt>
+<dd>
+<p><strong>Optional</strong>-<em>integer</em>- Estimated/exact size of data (e.g. file size, volume size, or message size); might be used to assess HW requirements (RAM, CPU) . In bytes (k - kilo, m - mega, t - tera, p - peta)</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nt">DATA_SIZE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">112m</span><span class="w"></span>
 </code></pre></div>
 </div>
 </div>
@@ -1127,7 +1103,7 @@ has these sections:</p>
 <dt><code>DATA_TAGS</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>list of strings</em>- A list of tags freely added to help in searching/indexing (not limited to a basic set of tags, keywords)</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nt">DATA_TAGS</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">camera</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">rgb</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">w640</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">h480</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">jpg</span><span class="p p-Indicator">]</span><span class="w"></span>
@@ -1142,10 +1118,10 @@ has these sections:</p>
 <dt><code>DATA_KIND</code></dt>
 <dd>
 <p><strong>Required</strong>-<em>enum</em>- Type of the data resource (e.g. file/object storage, database management system, streaming broker). FILE can mean a single file or a folder.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nt">DATA_KIND</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FILE , DIRECTORY , DATABASE , STREAM</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">DATA_KIND</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FILE , DATABASE , STREAM</span><span class="w"></span>
 </code></pre></div>
 </div>
 </div>
@@ -1154,7 +1130,7 @@ has these sections:</p>
 <dt><code>DATA_DIRECTION</code></dt>
 <dd>
 <p><strong>Required</strong>-<em>enum</em>- Direction of data flow (source: data provider, sink: data consumer/storage)</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nt">DATA_DIRECTION</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SOURCE , SINK , BIDIRECTIONAL</span><span class="w"></span>
@@ -1166,7 +1142,7 @@ has these sections:</p>
 <dt><code>DATA_FORMAT</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>list of strings</em>- Format/encoding of the data produced or consumed by the data resource as a MIME type (IETF RFC 6838 https://www.sitepoint.com/mime-types-complete-list/). More than one can appear here (remote directory with several files).</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nt">DATA_FORMAT</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span><span class="nv">application/json</span><span class="w"> </span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">text/plain</span><span class="w"> </span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">application/octet-stream</span><span class="w"> </span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">application/zip</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w"> </span>
@@ -1181,7 +1157,7 @@ has these sections:</p>
 <dt><code>DATA_SOURCE_TYPE</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>string</em>- The exact type of the data resource. Typically corresponds to the scheme part (protocol://) of DATA_URI.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nt">DATA_SOURCE_TYPE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S3 , MYSQL , MQTT , ... (WP6</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DATA_SOURCE_TYPE=LOCAL, PATH=...&quot;)</span><span class="w"></span>
@@ -1193,7 +1169,7 @@ has these sections:</p>
 <dt><code>DATA_URI (pseudo vars: DATA_PROTOCOL, DATA_HOST, DATA_PORT, DATA_PATH, DATA_QUERY, DATA_FRAGMENT)</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>URI</em>- Accessibility of the data resource, including host, port information, protocol, and other fields (path is protocol dependent, can be a topic name). GUI may show host, port, path separately. Hidden at search. Format: protocol://host:port/path </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nt">DATA_URI (pseudo vars</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DATA_PROTOCOL, DATA_HOST, DATA_PORT, DATA_PATH, DATA_QUERY, DATA_FRAGMENT)</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">s3://amazonaws/bucket/object , kafka://host/topic#1 , ...</span><span class="w"></span>
@@ -1202,13 +1178,13 @@ has these sections:</p>
 </div>
 </div>
 </dd>
-<dt><code>DATA_AUTH_TYPE</code></dt>
+<dt><code>DATA_AUTH</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>list of enums</em>- One or more authentication types that can be accepted by the storage resource.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nt">DATA_AUTH_TYPE</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span><span class="nv">none</span><span class="w"> </span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">userpass</span><span class="w"> </span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">accesskey_secretkey</span><span class="w"> </span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ssl_certificate</span><span class="w"> </span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">tls_mutual</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">access_token</span><span class="w"> </span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">rclone_config</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="nv">+</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">DATA_AUTH</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span><span class="nv">none</span><span class="w"> </span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">userpass</span><span class="w"> </span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">accesskey_secretkey</span><span class="w"> </span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ssl_certificate</span><span class="w"> </span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">tls_mutual</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">access_token</span><span class="w"> </span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">rclone_config</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="nv">+</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w"></span>
 </code></pre></div>
 </div>
 </div>
@@ -1227,7 +1203,7 @@ has these sections:</p>
 <dt><code>DATA_PROTOCOL</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>string</em>- Protocol to use in communication with the data source, only if DATA_TYPE does not imply it (e.g. S3 over HTTP). Moved from to Data access specification.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nt">DATA_PROTOCOL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTTP, HTTPS, TCP, UDP</span><span class="w"></span>
@@ -1239,7 +1215,7 @@ has these sections:</p>
 <dt><code>DATA_MYSQL_DIALECT</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>string</em>- Protocol dialect to be used in communication with the database</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nt">DATA_MYSQL_DIALECT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysqldialect , mariadbdialect</span><span class="w"></span>
@@ -1251,7 +1227,7 @@ has these sections:</p>
 <dt><code>DATA_MQTT_PROTOCOL_VERSION</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>string</em>- MQTT protocol version must be used</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nt">DATA_MQTT_PROTOCOL_VERSION</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.1.1, 5.0</span><span class="w"></span>
@@ -1263,7 +1239,7 @@ has these sections:</p>
 <dt><code>DATA_KAFKA_BROKER_VERSION</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>string</em>- Kafka broker version</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nt">DATA_KAFKA_BROKER_VERSION</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.7.0</span><span class="w"></span>
@@ -1275,7 +1251,7 @@ has these sections:</p>
 <dt><code>DATA_S3_REGION</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>string</em>- S3 region</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="23:1"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nt">DATA_S3_REGION</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eu-central-1</span><span class="w"></span>
@@ -1290,7 +1266,7 @@ has these sections:</p>
 <dt><code>DATA_SCHEMA</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>string</em>- Describes message internal structure, semantics, ontology. It can be any file (doc, rdf, owl, etc.). Asset Administration Shell, IEC 61360 - Common Data Dictionary, ...</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="24:1"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">Example</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nt">DATA_SCHEMA</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">database schema file contents (or URL?)</span><span class="w"></span>
