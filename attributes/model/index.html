@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../../img/db-logo.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.7">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.8">
     
     
       
@@ -17,7 +17,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.cd566b2a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6e60f8b8.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -562,6 +562,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     Parameters
   </a>
@@ -867,6 +874,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     Parameters
   </a>
@@ -933,183 +947,141 @@
 <p>The metadata specification for a DIGITbrain Model
 has these sections:</p>
 <ul>
+<li><a href="#description">Description</a></li>
 <li><a href="#parameters">Parameters</a></li>
 <li><a href="#dependant-fmus">Dependant FMUs</a></li>
 <li><a href="#os-requirements">OS Requirements</a></li>
 <li><a href="#hardware-requirements-">Hardware Requirements </a></li>
 <li><a href="#publishing">Publishing</a></li>
 </ul>
+<h3 id="description">Description</h3>
 <dl>
-<dt><code>Description</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>string</em>- Model tag description Additional info about model files (e.g. versioning, scope, i.e. what is the model used for, e.g. simulation, control, etc.) - Human readable marketplace description</p>
-</dd>
 <dt><code>ID</code></dt>
-<dd>
-<p><strong>Auto-generated</strong>-<em>UUID</em>- Internal DigitBrain reference (automatically generated)</p>
-</dd>
+<dd><strong>Auto-generated</strong>-<em>UUID</em>- Internal DigitBrain reference (automatically generated)</dd>
 <dt><code>Name</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>string</em>- Human-readable name of the output</p>
-</dd>
+<dd><strong>Optional</strong>-<em>string</em>- Name of the model</dd>
 <dt><code>Version</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>semver</em>- Version of the model. If model only has revisions, use semver prerelease 0.1, 0.2, etc.</p>
-</dd>
+<dd><strong>Optional</strong>-<em>semver</em>- Version of the model. If model only has revisions, use semver prerelease 0.1, 0.2, etc.</dd>
 <dt><code>License</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>enum</em>- License of the model.  Type tbd in SAD group</p>
-</dd>
+<dd><strong>Optional</strong>-<em>enum</em>- License of the model.  Type tbd in SAD group</dd>
 <dt><code>Provider</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>string</em>- Provider name: Institution or Person</p>
-</dd>
+<dd><strong>Optional</strong>-<em>string</em>- Provider name: Institution or Person</dd>
 <dt><code>Provider_contacts</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>obj</em>- Dictionary with keys being phone, email, address - Type takes into account co-simulation models, for which solver info is mandatory (next slide)</p>
-</dd>
+<dd><strong>Optional</strong>-<em>obj</em>- Dictionary with keys being phone, email, address - Type takes into account co-simulation models, for which solver info is mandatory (next slide)</dd>
 <dt><code>AuthTool</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>enum</em>- Authoring Tool used to create the model</p>
-</dd>
+<dd><strong>Optional</strong>-<em>enum</em>- Authoring Tool used to create the model</dd>
 <dt><code>Type</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>enum</em>- ML, LCA, 3D FEM and CFD, System simulation, discrete event simulation, co-simulation (it couples a model with specific algorithms) - The original term Path was proposed to be changed (SAD)</p>
-</dd>
+<dd><strong>Optional</strong>-<em>enum</em>- ML, LCA, 3D FEM and CFD, System simulation, discrete event simulation, co-simulation (it couples a model with specific algorithms) - The original term Path was proposed to be changed (SAD)</dd>
 <dt><code>Fidelity</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>number</em>- Error of the model’s prediction</p>
-</dd>
+<dd><strong>Optional</strong>-<em>number</em>- Error of the model’s prediction</dd>
 <dt><code>Model_URI</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>URI</em>- Where the model file is stored  Where the model file is stored DigitBrain certified external model repository - We could keep these fields into minimum and add further enums if needed, e.g. Linear_equations</p>
-</dd>
+<dd><strong>Optional</strong>-<em>URI</em>- Where the model file is stored  Where the model file is stored DigitBrain certified external model repository - We could keep these fields into minimum and add further enums if needed, e.g. Linear_equations</dd>
 <dt><code>Model_FILENAME</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>string</em>- Name of the model file (if necessary) for example when MODEL_URI points to a repository and not a single file</p>
-</dd>
+<dd><strong>Optional</strong>-<em>string</em>- Name of the model file (if necessary) for example when MODEL_URI points to a repository and not a single file</dd>
 <dt><code>State_depend</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>bool</em>- stateful -&gt; 1, stateless -&gt; 0</p>
-</dd>
+<dd><strong>Optional</strong>-<em>bool</em>- stateful -&gt; 1, stateless -&gt; 0</dd>
 </dl>
 <h3 id="parameters">Parameters</h3>
 <dl>
 <dt><code>In-slots</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>array of obj</em>- Values on which the model is evaluated (or parameters that might set before or during the evaluation) - Inputs and parameters together, although if needed we can still differentiate them internally in key field for each specific model.</p>
-</dd>
+<dl>
 <dt><code>Key</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>string</em>- Group key (eg. type and name) of the output</p>
-</dd>
+<dd><strong>Optional</strong>-<em>string</em>- Group key (eg. type and name) of the in-slot</dd>
+<dt><code>Name</code></dt>
+<dd><strong>Optional</strong>-<em>string</em>- Human-readable name of the in-slot</dd>
 <dt><code>Dimensions</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>number</em>- Number of dimensions of the output (i.e. scalar, vector field)</p>
-</dd>
+<dd><strong>Optional</strong>-<em>number</em>- Number of dimensions of the in-slot (i.e. scalar, vector field)</dd>
 <dt><code>Is-continuous</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>boolean</em>- Continuous or discreet output</p>
-</dd>
+<dd><strong>Optional</strong>-<em>boolean</em>- continuous or discreet in-slot</dd>
 <dt><code>Units</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>obj (see subkeys below)</em>- Values related to the output measurement units</p>
-</dd>
+<dd><strong>Optional</strong>-<em>obj (see subkeys below)</em>- Values related to the in-slot measurement units</dd>
 <dt><code>Units.Unit</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>string</em>- Units of the output (e.g Pa, m/s, etc…)</p>
-</dd>
+<dd><strong>Optional</strong>-<em>string</em>- Units of the in-slot (e.g Pa, m/s, etc…)</dd>
 <dt><code>Units.Exponent</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>array of number</em>- eg. exponents for kg (SI) {1, -2, 0, 0, 0, 0, 1}</p>
-</dd>
+<dd><strong>Optional</strong>-<em>array of number</em>- eg. exponents for kg (SI) {1, -2, 0, 0, 0, 0, 1}</dd>
 <dt><code>Units.Offset</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>number</em>- scale offset if needed (e.g. K to C conversion)</p>
-</dd>
+<dd><strong>Optional</strong>-<em>number</em>- scale offset if needed (e.g. K to C conversion)</dd>
 <dt><code>Units.Scale</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>number</em>- Order of magnitude of the measurement unit scale e.g. Scale is equal to 10^-3 for values expressed in mm</p>
-</dd>
+<dd><strong>Optional</strong>-<em>number</em>- Order of magnitude of the measurement unit scale e.g. Scale is equal to 10^-3 for values expressed in mm</dd>
 <dt><code>Default-value</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>number</em>- Default value for the output</p>
-</dd>
+<dd><strong>Optional</strong>-<em>number</em>- Default value for the in-slot</dd>
 <dt><code>Ranges</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>array of number</em>- Max and min value of the output</p>
+<dd><strong>Optional</strong>-<em>array of number</em>- Max and min value of the in-slot</dd>
+</dl>
 </dd>
 <dt><code>Outputs</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>array of obj</em>- Values that the model approximates</p>
+<dl>
+<dt><code>Key</code></dt>
+<dd><strong>Optional</strong>-<em>string</em>- Group key (eg. type and name) of the output</dd>
+<dt><code>Name</code></dt>
+<dd><strong>Optional</strong>-<em>string</em>- Human-readable name of the output</dd>
+<dt><code>Dimensions</code></dt>
+<dd><strong>Optional</strong>-<em>number</em>- Number of dimensions of the output (i.e. scalar, vector field)</dd>
+<dt><code>Is-continuous</code></dt>
+<dd><strong>Optional</strong>-<em>boolean</em>- Continuous or discreet output</dd>
+<dt><code>Units</code></dt>
+<dd><strong>Optional</strong>-<em>obj (see subkeys below)</em>- Values related to the output measurement units</dd>
+<dt><code>Units.Unit</code></dt>
+<dd><strong>Optional</strong>-<em>string</em>- Units of the output (e.g Pa, m/s, etc…)</dd>
+<dt><code>Units.Exponent</code></dt>
+<dd><strong>Optional</strong>-<em>array of number</em>- eg. exponents for kg (SI) {1, -2, 0, 0, 0, 0, 1}</dd>
+<dt><code>Units.Offset</code></dt>
+<dd><strong>Optional</strong>-<em>number</em>- scale offset if needed (e.g. K to C conversion)</dd>
+<dt><code>Units.Scale</code></dt>
+<dd><strong>Optional</strong>-<em>number</em>- Order of magnitude of the measurement unit scale e.g. Scale is equal to 10^-3 for values expressed in mm</dd>
+<dt><code>Default-value</code></dt>
+<dd><strong>Optional</strong>-<em>number</em>- Default value for the output</dd>
+<dt><code>Ranges</code></dt>
+<dd><strong>Optional</strong>-<em>array of number</em>- Max and min value of the output</dd>
+</dl>
 </dd>
 <dt><code>CosimSolverInfo</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>obj</em>- For co-simulation Type only</p>
-</dd>
+<dd><strong>Optional</strong>-<em>obj</em>- For co-simulation Type only</dd>
 </dl>
 <h3 id="dependant-fmus">Dependant FMUs</h3>
 <dl>
 <dt><code>Dependencies</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>array of URI</em>- Dependant FMUs for co-simulation</p>
-</dd>
+<dd><strong>Optional</strong>-<em>array of URI</em>- Dependant FMUs for co-simulation</dd>
 </dl>
 <h3 id="os-requirements">OS Requirements</h3>
 <dl>
 <dt><code>osArch</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>enum</em>- OS architecture type (e.g. x86_64)</p>
-</dd>
+<dd><strong>Optional</strong>-<em>enum</em>- OS architecture type (e.g. x86_64)</dd>
 <dt><code>osType</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>enum</em>- OS type (e.g. Windows, Linux)</p>
-</dd>
+<dd><strong>Optional</strong>-<em>enum</em>- OS type (e.g. Windows, Linux)</dd>
 <dt><code>osDistribution</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>enum</em>- OS distributun (e.g. Ubuntu, Fedora)</p>
-</dd>
+<dd><strong>Optional</strong>-<em>enum</em>- OS distributun (e.g. Ubuntu, Fedora)</dd>
 </dl>
 <h3 id="hardware-requirements">Hardware Requirements</h3>
 <dl>
 <dt><code>recommendedNumberOfGPUCores</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>number</em>- Recommended number of GPU cores</p>
-</dd>
+<dd><strong>Optional</strong>-<em>number</em>- Recommended number of GPU cores</dd>
 <dt><code>minimumNumberOfGPUCores</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>number</em>- Minimum required number of GPU cores</p>
-</dd>
+<dd><strong>Optional</strong>-<em>number</em>- Minimum required number of GPU cores</dd>
 <dt><code>recommendedGPURAM</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>number</em>- Recommended GPU memory</p>
-</dd>
+<dd><strong>Optional</strong>-<em>number</em>- Recommended GPU memory</dd>
 <dt><code>minimumGPURAM</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>number</em>- Minimum required GPU memory</p>
-</dd>
+<dd><strong>Optional</strong>-<em>number</em>- Minimum required GPU memory</dd>
 <dt><code>recommendedRAM</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>number</em>- Recommended Memory</p>
-</dd>
+<dd><strong>Optional</strong>-<em>number</em>- Recommended Memory</dd>
 <dt><code>minimumRAM</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>number</em>- Minimum required memory</p>
-</dd>
+<dd><strong>Optional</strong>-<em>number</em>- Minimum required memory</dd>
 <dt><code>recommendedCPUs</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>number</em>- Recommended number of CPU cores</p>
-</dd>
+<dd><strong>Optional</strong>-<em>number</em>- Recommended number of CPU cores</dd>
 <dt><code>minimumCPUs</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>number</em>- Minimum required number of CPU cores</p>
-</dd>
+<dd><strong>Optional</strong>-<em>number</em>- Minimum required number of CPU cores</dd>
 <dt><code>requiredDiskSpace</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>number</em>- Required amount of disk space in GB</p>
-</dd>
+<dd><strong>Optional</strong>-<em>number</em>- Required amount of disk space in GB</dd>
 </dl>
 <h3 id="publishing">Publishing</h3>
+<dl>
+<dt><code>Description</code></dt>
+<dd><strong>Optional</strong>-<em>string</em>- Model tag description Additional info about model files (e.g. versioning, scope, i.e. what is the model used for, e.g. simulation, control, etc.) - Human readable marketplace description</dd>
+</dl>
 
               
             </article>
@@ -1178,7 +1150,7 @@ has these sections:</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.01de222e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.960e086b.min.js"></script>
       
     
   </body>

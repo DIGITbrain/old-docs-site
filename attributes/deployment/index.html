@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../../img/db-logo.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.7">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.8">
     
     
       
@@ -17,7 +17,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.cd566b2a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6e60f8b8.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -912,74 +912,56 @@ has these sections:</p>
 <h3 id="description">Description</h3>
 <dl>
 <dt><code>id</code></dt>
-<dd>
-<p><strong>Auto-generated</strong>-<em>UUID</em>- DIGITbrain reference</p>
-</dd>
+<dd><strong>Auto-generated</strong>-<em>UUID</em>- DIGITbrain reference</dd>
 <dt><code>name</code></dt>
-<dd>
-<p><strong>Required</strong>-<em>String</em>- Short name for the node/device</p>
-</dd>
+<dd><strong>Required</strong>-<em>String</em>- Short name for the node/device</dd>
 <dt><code>author</code></dt>
-<dd>
-<p><strong>Required</strong>-<em>String</em>- Created by</p>
-</dd>
+<dd><strong>Required</strong>-<em>String</em>- Created by</dd>
 <dt><code>date</code></dt>
-<dd>
-<p><strong>Auto-generated</strong>-<em>Date</em>- Created on</p>
-</dd>
+<dd><strong>Auto-generated</strong>-<em>Date</em>- Created on</dd>
 </dl>
 <h3 id="deployments">Deployments</h3>
 <dl>
 <dt><code>type</code></dt>
-<dd>
-<p><strong>Required</strong>-<em>Enumeration {cloudbroker, edge}</em>- computing centre</p>
-</dd>
+<dd><strong>Required</strong>-<em>Enumeration {cloudbroker, edge}</em>- computing centre</dd>
 <dt><code>cloudbroker</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>Map of…</em>- Configuration data for a CloudBroker instance</p>
-</dd>
+<dl>
 <dt><code>deployment_id</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>UUID</em>- ID of CloudBroker Deployment</p>
-</dd>
+<dd><strong>Optional</strong>-<em>UUID</em>- ID of CloudBroker Deployment</dd>
 <dt><code>instance_type_id</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>UUID</em>- ID of CloudBroker InstanceType</p>
-</dd>
+<dd><strong>Optional</strong>-<em>UUID</em>- ID of CloudBroker InstanceType</dd>
 <dt><code>key_pair_id</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>UUID</em>- ID of CloudBroker Key Pair</p>
-</dd>
+<dd><strong>Optional</strong>-<em>UUID</em>- ID of CloudBroker Key Pair</dd>
 <dt><code>opened_port</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>String (comma separated integers)</em>- Ports to open at cloud side</p>
-</dd>
+<dd><strong>Optional</strong>-<em>String (comma separated integers)</em>- Ports to open at cloud side</dd>
 <dt><code>endpoint</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>URL</em>- accesible IP or FQDN of edge device</p>
+<dd><strong>Optional</strong>-<em>URL</em>- Endpoint of the CB Platform</dd>
+</dl>
 </dd>
 <dt><code>edge</code></dt>
 <dd>
 <p><strong>Optional</strong>-<em>Map of…</em>- Connection data for a bring-your-own edge</p>
+<dl>
+<dt><code>endpoint</code></dt>
+<dd><strong>Optional</strong>-<em>URL</em>- accesible IP or FQDN of edge device</dd>
+</dl>
 </dd>
 </dl>
 <h3 id="data-source-mapping">Data Source Mapping</h3>
 <dl>
 <dt><code>data_source_mapping</code></dt>
 <dd>
-<p><strong>Optional</strong>-<em>Map of…</em>- Mapping Microservices to Data assets, as available in the DMA Tuple</p>
-</dd>
+<p><strong>Optional</strong>-<em>Map of…</em>- Mapping the available Data assets in this DMA Tuple to available Microservices. One Microservice may require several Data assets, specified by their UUIDs.</p>
+<dl>
 <dt><code>microserviceA_data</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>List of UUIDs</em>- UUIDs of required data sources for MicroserviceA</p>
-</dd>
+<dd><strong>Optional</strong>-<em>List of UUIDs</em>- UUIDs of required data sources for MicroserviceA</dd>
 <dt><code>microserviceB_data</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>List of UUIDs</em>- UUIDs of required data sources for MicroserviceB</p>
-</dd>
+<dd><strong>Optional</strong>-<em>List of UUIDs</em>- UUIDs of required data sources for MicroserviceB</dd>
 <dt><code>microserviceC_data</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>List of UUIDs</em>- UUIDs of required data sources for MicroserviceC</p>
+<dd><strong>Optional</strong>-<em>List of UUIDs</em>- UUIDs of required data sources for MicroserviceC</dd>
+</dl>
 </dd>
 </dl>
 
@@ -1050,7 +1032,7 @@ has these sections:</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.01de222e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.960e086b.min.js"></script>
       
     
   </body>
