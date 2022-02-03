@@ -923,6 +923,14 @@ has these sections:</p>
 <dd><strong>Optional</strong>-<em>String (comma separated integers)</em>- Ports to open at cloud side</dd>
 <dt><code>endpoint</code></dt>
 <dd><strong>Optional</strong>-<em>URL</em>- Endpoint of the CB Platform</dd>
+<dt><code>cloud_config</code></dt>
+<dd><strong>Optional</strong>-<em>String</em>- cloud-init configuration for contextualisation of the VM<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"><div class="highlight"><pre><span></span><code><span class="nt">cloud_config</span><span class="p">:</span><span class="w"> </span><span class="c1">#cloud-config\nruncmd:\n- [ sh, -xc, \&quot;echo &#39;hello world!&#39;\&quot; ]</span><span class="w"></span>
+</code></pre></div></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd>
 <dt><code>edge</code></dt>
