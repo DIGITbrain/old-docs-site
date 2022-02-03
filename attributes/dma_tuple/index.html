@@ -610,13 +610,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#data-source-mapping" class="md-nav__link">
-    Data Source Mapping
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -852,13 +845,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#data-source-mapping" class="md-nav__link">
-    Data Source Mapping
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -892,7 +878,6 @@
 has these sections:</p>
 <ul>
 <li><a href="#definition">Definition</a></li>
-<li><a href="#data-source-mapping">Data Source Mapping</a></li>
 </ul>
 <h3 id="definition">Definition</h3>
 <dl>
@@ -1004,16 +989,28 @@ has these sections:</p>
 </div>
 </div>
 </dd>
-<dt><code>D Assets</code></dt>
-<dd><strong>Optional</strong>-<em>IDs / URIs</em>- Identifiers of the Data Assets associated to the DMA Tuple<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Example</label></div>
+<dt><code>DataAssetsMapping</code></dt>
+<dd>
+<p><strong>Optional</strong>-<em>Map</em>- Mapping the available Data assets in this DMA Tuple to available Microservices. Required if Data assets are required. Not all microservices need a Data asset.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Example</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"><div class="highlight"><pre><span></span><code><span class="nt">D Assets</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data_123e4567-e89b-12d3</span><span class="w"></span>
+<div class="tabbed-block"><div class="highlight"><pre><span></span><code><span class="nt">DataAssetsMapping</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span><span class="s">&quot;microserviceA_ID&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;data_123e4567-e89b-12d3&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;microserviceB_ID&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;data_234e4567-e89b-23d4&quot;</span><span class="p p-Indicator">}</span><span class="w"></span>
+</code></pre></div></div>
+</div>
+</div>
+<dl>
+<dt><code>microserviceA_ID</code></dt>
+<dd><strong>Optional</strong>-<em>nan</em>- 1:1 relationship between a Microservice and a Data asset, specified by their IDs<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"><div class="highlight"><pre><span></span><code><span class="nt">microserviceA_ID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data_123e4567-e89b-12d3</span><span class="w"></span>
 </code></pre></div></div>
 </div>
 </div>
 </dd>
+</dl>
+</dd>
 <dt><code>Deployments</code></dt>
-<dd><strong>Optional</strong>-<em>See "Deployments"</em>- Characteristics of the Deployment for every Microservice associated to the DMA Tuple (NB: Entities for the available deployment infrastructures to be provided by DB Solution and selected for DMA Tuple. No deployment entity metadata structure currently exists)<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Example</label></div>
+<dd><strong>Optional</strong>-<em>See "Deployments"</em>- Characteristics of the Deployment for every Microservice associated to the DMA Tuple (NB: Entities for the available deployment infrastructures to be provided by DB Solution and selected for DMA Tuple. No deployment entity metadata structure currently exists)<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"><div class="highlight"><pre><span></span><code><span class="nt">Deployments</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deployments_123e4567-e89b-12d3</span><span class="w"></span>
 </code></pre></div></div>
@@ -1021,7 +1018,7 @@ has these sections:</p>
 </div>
 </dd>
 <dt><code>Schedule</code></dt>
-<dd><strong>Optional</strong>-<em>Dates</em>- Days and hours the DMA Tuple will be active (optional)<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Example</label></div>
+<dd><strong>Optional</strong>-<em>Dates</em>- Days and hours the DMA Tuple will be active (optional)<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"><div class="highlight"><pre><span></span><code><span class="nt">Schedule</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">R90/2021-05-01T00:00:00Z/PT48H</span><span class="w"></span>
 </code></pre></div></div>
@@ -1029,27 +1026,12 @@ has these sections:</p>
 </div>
 </dd>
 <dt><code>Payload</code></dt>
-<dd><strong>Optional</strong>-<em>String</em>- User-defined key-value pairs: JSON string with additional information (optional)<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Example</label></div>
+<dd><strong>Optional</strong>-<em>String</em>- User-defined key-value pairs: JSON string with additional information (optional)<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Example</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"><div class="highlight"><pre><span></span><code><span class="nt">Payload</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">‘injectionMold’</span><span class="p">:</span><span class="w"> </span><span class="nv">‘Circuit Case’</span><span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></div>
 </div>
 </div>
-</dd>
-</dl>
-<h3 id="data-source-mapping">Data Source Mapping</h3>
-<dl>
-<dt><code>data_source_mapping</code></dt>
-<dd>
-<p><strong>Optional</strong>-<em>Map of…</em>- Mapping the available Data assets in this DMA Tuple to available Microservices. One Microservice may require several Data assets, specified by their UUIDs.</p>
-<dl>
-<dt><code>microserviceA_data</code></dt>
-<dd><strong>Optional</strong>-<em>List of UUIDs</em>- UUIDs of required Data asset(s) for MicroserviceA</dd>
-<dt><code>microserviceB_data</code></dt>
-<dd><strong>Optional</strong>-<em>List of UUIDs</em>- UUIDs of required Data asset(s) for  MicroserviceB</dd>
-<dt><code>microserviceC_data</code></dt>
-<dd><strong>Optional</strong>-<em>List of UUIDs</em>- UUIDs of required Data asset(s) for  MicroserviceC</dd>
-</dl>
 </dd>
 </dl>
 
